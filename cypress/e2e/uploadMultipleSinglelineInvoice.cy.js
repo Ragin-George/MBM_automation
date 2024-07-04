@@ -13,14 +13,14 @@ describe('Login', () => {
         cy.get('#invoices_list_add').click();
         cy.get('#brows-file-btn').selectFile(['Single line Invoices/Grenke.pdf', 'Single line Invoices/RG 01.11.2022 - RonBa Bankowsky - 2022-1.pdf', 'Single line Invoices/Rg vom 01.03.2022 - Rechtsanwalt Sprenger.pdf', 'Single line Invoices/Rg vom 02.11.2022 - Viking.pdf', 'Single line Invoices/Rg vom 20.02.2022 - MyCommerce.pdf'], {action: 'drag-drop'}) 
         cy.get('#upload-invoice-by-operator-submit').click();
-        cy.wait(40000);
+        cy.wait(45000);
         cy.get('#invoices_list_refresh').click();
 
 
-        cy.get('#operator-invoice-code-INV-1254').click();
+        cy.get('#operator-invoice-code-INV-1291').click();
         cy.wait(3000);
         cy.get('#invoiceno').invoke('val').then(text => { const invoice_no = text;
-        cy.get('#date-picker-canvas-form-invoice-date').invoke('val').then(text => { const invoice_date = text;
+        cy.get('#invoiceDate').invoke('val').then(text => { const invoice_date = text;
         cy.get('#canvas-form-vat-no').invoke('val').then(text => { const vat_no = text;
         cy.get('#canvas-form-supplier-name').invoke('val').then(text => { const supplier_name = text;
         cy.get('#canvas-form-supplier-address').invoke('val').then(text => { const supplier_address = text;
@@ -92,10 +92,10 @@ describe('Login', () => {
 
 
         cy.get('#invoices_list_refresh').click();
-        cy.get('#operator-invoice-code-INV-1255').click();
+        cy.get('#operator-invoice-code-INV-1292').click();
         cy.wait(3000);
         cy.get('#invoiceno').invoke('val').then(text => { const invoice_no = text;
-        cy.get('#date-picker-canvas-form-invoice-date').invoke('val').then(text => { const invoice_date = text;
+        cy.get('#invoiceDate').invoke('val').then(text => { const invoice_date = text;
         cy.get('#canvas-form-vat-no').invoke('val').then(text => { const vat_no = text;
         cy.get('#canvas-form-supplier-name').invoke('val').then(text => { const supplier_name = text;
         cy.get('#canvas-form-supplier-address').invoke('val').then(text => { const supplier_address = text;
@@ -166,10 +166,10 @@ describe('Login', () => {
 
 
         cy.get('#invoices_list_refresh').click();
-        cy.get('#operator-invoice-code-INV-1256').click();
+        cy.get('#operator-invoice-code-INV-1293').click();
         cy.wait(3000);
         cy.get('#invoiceno').invoke('val').then(text => { const invoice_no = text;
-        cy.get('#date-picker-canvas-form-invoice-date').invoke('val').then(text => { const invoice_date = text;
+        cy.get('#invoiceDate').invoke('val').then(text => { const invoice_date = text;
         cy.get('#canvas-form-vat-no').invoke('val').then(text => { const vat_no = text;
         cy.get('#canvas-form-supplier-name').invoke('val').then(text => { const supplier_name = text;
         cy.get('#canvas-form-supplier-address').invoke('val').then(text => { const supplier_address = text;
@@ -240,10 +240,10 @@ describe('Login', () => {
 
 
         cy.get('#invoices_list_refresh').click();
-        cy.get('#operator-invoice-code-INV-1257').click();
+        cy.get('#operator-invoice-code-INV-1294').click();
         cy.wait(3000);
         cy.get('#invoiceno').invoke('val').then(text => { const invoice_no = text;
-        cy.get('#date-picker-canvas-form-invoice-date').invoke('val').then(text => { const invoice_date = text;
+        cy.get('#invoiceDate').invoke('val').then(text => { const invoice_date = text;
         cy.get('#canvas-form-vat-no').invoke('val').then(text => { const vat_no = text;
         cy.get('#canvas-form-supplier-name').invoke('val').then(text => { const supplier_name = text;
         cy.get('#canvas-form-supplier-address').invoke('val').then(text => { const supplier_address = text;
@@ -314,14 +314,11 @@ describe('Login', () => {
 
 
 
-        cy.go('back');
-
-
         cy.get('#invoices_list_refresh').click();
-        cy.get('#operator-invoice-code-INV-1258').click();
+        cy.get('#operator-invoice-code-INV-1295').click();
         cy.wait(3000);
         cy.get('#invoiceno').invoke('val').then(text => { const invoice_no = text;
-        cy.get('#date-picker-canvas-form-invoice-date').invoke('val').then(text => { const invoice_date = text;
+        cy.get('#invoiceDate').invoke('val').then(text => { const invoice_date = text;
         cy.get('#canvas-form-vat-no').invoke('val').then(text => { const vat_no = text;
         cy.get('#canvas-form-supplier-name').invoke('val').then(text => { const supplier_name = text;
         cy.get('#canvas-form-supplier-address').invoke('val').then(text => { const supplier_address = text;
