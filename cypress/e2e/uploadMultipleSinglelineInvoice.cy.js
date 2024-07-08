@@ -17,10 +17,10 @@ describe('Login', () => {
         cy.get('#invoices_list_refresh').click();
 
 
-        cy.get('#operator-invoice-code-INV-1291').click();
+        cy.get('#operator-invoice-code-INV-1330').click();
         cy.wait(3000);
         cy.get('#invoiceno').invoke('val').then(text => { const invoice_no = text;
-        cy.get('#invoiceDate').invoke('val').then(text => { const invoice_date = text;
+        cy.get('#my-custom-id-invoiceDate').invoke('val').then(text => { const invoice_date = text;
         cy.get('#canvas-form-vat-no').invoke('val').then(text => { const vat_no = text;
         cy.get('#canvas-form-supplier-name').invoke('val').then(text => { const supplier_name = text;
         cy.get('#canvas-form-supplier-address').invoke('val').then(text => { const supplier_address = text;
@@ -92,10 +92,10 @@ describe('Login', () => {
 
 
         cy.get('#invoices_list_refresh').click();
-        cy.get('#operator-invoice-code-INV-1292').click();
+        cy.get('#operator-invoice-code-INV-1331').click();
         cy.wait(3000);
         cy.get('#invoiceno').invoke('val').then(text => { const invoice_no = text;
-        cy.get('#invoiceDate').invoke('val').then(text => { const invoice_date = text;
+        cy.get('#my-custom-id-invoiceDate').invoke('val').then(text => { const invoice_date = text;
         cy.get('#canvas-form-vat-no').invoke('val').then(text => { const vat_no = text;
         cy.get('#canvas-form-supplier-name').invoke('val').then(text => { const supplier_name = text;
         cy.get('#canvas-form-supplier-address').invoke('val').then(text => { const supplier_address = text;
@@ -166,10 +166,10 @@ describe('Login', () => {
 
 
         cy.get('#invoices_list_refresh').click();
-        cy.get('#operator-invoice-code-INV-1293').click();
+        cy.get('#operator-invoice-code-INV-1332').click();
         cy.wait(3000);
         cy.get('#invoiceno').invoke('val').then(text => { const invoice_no = text;
-        cy.get('#invoiceDate').invoke('val').then(text => { const invoice_date = text;
+        cy.get('#my-custom-id-invoiceDate').invoke('val').then(text => { const invoice_date = text;
         cy.get('#canvas-form-vat-no').invoke('val').then(text => { const vat_no = text;
         cy.get('#canvas-form-supplier-name').invoke('val').then(text => { const supplier_name = text;
         cy.get('#canvas-form-supplier-address').invoke('val').then(text => { const supplier_address = text;
@@ -240,10 +240,10 @@ describe('Login', () => {
 
 
         cy.get('#invoices_list_refresh').click();
-        cy.get('#operator-invoice-code-INV-1294').click();
+        cy.get('#operator-invoice-code-INV-1333').click();
         cy.wait(3000);
         cy.get('#invoiceno').invoke('val').then(text => { const invoice_no = text;
-        cy.get('#invoiceDate').invoke('val').then(text => { const invoice_date = text;
+        cy.get('#my-custom-id-invoiceDate').invoke('val').then(text => { const invoice_date = text;
         cy.get('#canvas-form-vat-no').invoke('val').then(text => { const vat_no = text;
         cy.get('#canvas-form-supplier-name').invoke('val').then(text => { const supplier_name = text;
         cy.get('#canvas-form-supplier-address').invoke('val').then(text => { const supplier_address = text;
@@ -315,10 +315,10 @@ describe('Login', () => {
 
 
         cy.get('#invoices_list_refresh').click();
-        cy.get('#operator-invoice-code-INV-1295').click();
+        cy.get('#operator-invoice-code-INV-1334').click();
         cy.wait(3000);
         cy.get('#invoiceno').invoke('val').then(text => { const invoice_no = text;
-        cy.get('#invoiceDate').invoke('val').then(text => { const invoice_date = text;
+        cy.get('#my-custom-id-invoiceDate').invoke('val').then(text => { const invoice_date = text;
         cy.get('#canvas-form-vat-no').invoke('val').then(text => { const vat_no = text;
         cy.get('#canvas-form-supplier-name').invoke('val').then(text => { const supplier_name = text;
         cy.get('#canvas-form-supplier-address').invoke('val').then(text => { const supplier_address = text;
@@ -386,6 +386,7 @@ describe('Login', () => {
         
         })})})})})})})})})})})})})})})})})})})})})})})})})})})})})})
         cy.go('back');
+
     })
 })
 
