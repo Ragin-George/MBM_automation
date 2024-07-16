@@ -1,8 +1,0 @@
-Invoice details web url ,Invoice Number,VAT no,Invoice Date,Supplier Name,Supplier Address,Net Amount,Tax Amount,Gross Amount,Line Item Number,Start Date,End Date,Employee,Budget Group,Category,Sub Category,Line Item Description,Line Item Gross Amount,Line Item Tax Percentage,Line Item Tax Amount,Line Item Net Amount,Paid By,Expense Type,Remaining Budget,Accept In Budget,Accept Over Budget,Accept Over Manual,Excess Over Budget,Comments,Exported0
-http://opencage.f2wdev.eu/invoice-detail/529,1287,,05-03-2024,,,1.68,0.12,1.80,item 1,01-03-2024,31-03-2024,,,,,,1.80,7,0.12,1.68,Self,Private,0.00,0.00,0.00,0.00,0.00,,
-
-
-http://opencage.f2wdev.eu/invoice-detail/530,24624,64/121/03507,02-12-2029,,Cloppenburger Str. 198 - 26133 Oldenburg,0.00,0.00,30.40,item 1,01-02-2029,28-02-2029,,,,,,30.40,0.00,0.00,0.00,Self,Private,0.00,0.00,0.00,0.00,0.00,,
-
-
-http://opencage.f2wdev.eu/invoice-detail/531,01HSDA5N,DE119360948,20-03-2024,Messe Düsseldorf GmbH,Stockumer Kirchstraße 61  40474 Düsseldorf,12.60,2.40,15.00,item 1,01-03-2024,31-03-2024,,,,,,15.00,19,2.40,12.60,Self,Private,0.00,0.00,0.00,0.00,0.00,,
