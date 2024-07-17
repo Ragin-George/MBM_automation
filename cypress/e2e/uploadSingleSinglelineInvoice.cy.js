@@ -11,12 +11,12 @@ describe('Login', () => {
         cy.visit("http://opencage.f2wdev.eu/invoices")
         cy.wait(3000);
         cy.get('#invoices_list_add').click();
-        cy.get('#brows-file-btn').selectFile('Single line Invoices/RG 01.11.2022 - RonBa Bankowsky - 2022-1.pdf', {action: 'drag-drop'})
+        cy.get('#brows-file-btn').selectFile('Single line Invoices/Grenke.pdf', {action: 'drag-drop'})
         cy.get('#upload-invoice-by-operator-submit').click();
         cy.wait(15000);
         cy.get('#invoices_list_refresh').click({force: true});
-        cy.get('#operator-invoice-code-INV-1462').click();
-        cy.wait(3000);
+        cy.get('#operator-invoice-code-INV-1489').click();
+        cy.wait(5000);
 
         cy.get('#invoiceno').invoke('val').then(text => { const invoice_no = text;
           cy.get('#my-custom-id-invoiceDate').invoke('val').then(text => { const invoice_date = text;
