@@ -1,0 +1,4 @@
+Invoice details web url ,Invoice Number,VAT no,Invoice Date,Supplier Name,Supplier Address,Net Amount,Tax Amount,Gross Amount
+https://opencage.f2wdev.eu/invoice-detail/2015,,,,,,725.00,137.75,862.75
+
+Line Item Number,Start Date,End Date,Budget Group,Category,Sub Category,Line Item Description,Line Item Gross Amount,Line Item Tax Percentage,Line Item Tax Amount,Line Item Net Amount,Paid By,Expense Type,Remaining Budget,Accept In Budget,Accept Over Budget,Accept Over Manual,Excess Over Budget,Comments,Exported

@@ -3,21 +3,25 @@ describe('Login', () => {
     it('Upload Multiple invoices!', () => {
         cy.visit("http://opencage.f2wdev.eu")
         cy.wait(1000);
-        cy.get("#emailaddress").type(Cypress.env("loginInfo").username);
-        cy.get("#password").type(Cypress.env("loginInfo").password);
+        cy.get('.MuiSelect-select').click();
+        cy.contains('Englisch').click();
+        cy.get('.MuiDialogActions-root > .MuiButton-outlined').click();
+        cy.wait(2000);
+        cy.get("#emailaddress").type("autooperator003@yopmail.com");
+        cy.get("#password").type("Password@1234");
         cy.wait(1000);
         cy.get("button[type='submit']").click();
         cy.wait(3000);
         cy.visit("http://opencage.f2wdev.eu/invoices")
         cy.wait(3000);
         cy.get('#invoices_list_add').click();
-        cy.get('#brows-file-btn').selectFile(['Single line Invoices/Grenke.pdf', 'Single line Invoices/RG 01.11.2022 - RonBa Bankowsky - 2022-1.pdf', 'Single line Invoices/Rg vom 01.03.2022 - Rechtsanwalt Sprenger.pdf', 'Single line Invoices/Rg vom 02.11.2022 - Viking.pdf', 'Single line Invoices/Rg vom 20.02.2022 - MyCommerce.pdf'], {action: 'drag-drop'}) 
+        cy.get('#brows-file-btn').selectFile(['InvoiceWithIssuesInAmount/1feea94d-184a-4e74-b521-c3a9ba5cdc6c_citadines8372561.pdf', 'InvoiceWithIssuesInAmount/2a1e8a3f-7d42-4250-942a-1046027e731a_cloudone224111rechnung.pdf','InvoiceWithIssuesInAmount/Rg 30.11.2022 - Emigholz - 2022-20806178.pdf', 'InvoiceWithIssuesInAmount/Rg 30.11.2022 - Göthling _ Kaufmann Automobile - VW - 440139.pdf','InvoiceWithIssuesInAmount/Rg 30.11.2022 - Löwenstark.pdf'], {action: 'drag-drop'}) 
         cy.get('#upload-invoice-by-operator-submit').click();
-        cy.wait(50000);
+        cy.wait(80000);
         cy.get('#invoices_list_refresh').click();
 
 
-        cy.get('#operator-invoice-code-INV-1463').click();
+        cy.get('#operator-invoice-code-INV-2608').click();
         cy.wait(5000);
         cy.get('#invoiceno').invoke('val').then(text => { const invoice_no = text;
         cy.get('#my-custom-id-invoiceDate').invoke('val').then(text => { const invoice_date = text;
@@ -59,13 +63,13 @@ describe('Login', () => {
         const lineGrossAmount= lineGrossAmount1.replace(/,/g,"");
         const linetaxAmount = linetaxAmount1.replace(/,/g,"");
         const linenetAmount = linenetAmount1.replace(/,/g,"");
-        cy.writeFile('AzureAI_Multiple_SingleLine_invoice.csv','Invoice details web url '+','+ 'Invoice Number'+','+'VAT no'+ ','+
-                  'Invoice Date'+','+ 'Supplier Name'+','+'Supplier Address'+','+'Net Amount'+','+'Tax Amount'+','+
+        cy.writeFile('AzureAI_Multiple_SingleLine_invoice.csv','Invoice details web url '+','+ 'Invoice Number'+','+ 
+                  'Invoice Date'+','+'VAT no'+','+ 'Supplier Name'+','+'Supplier Address'+','+'Net Amount'+','+'Tax Amount'+','+
                   'Gross Amount'+','+'Line Item Number'+','+'Start Date' +','+'End Date' +','+'Employee' +','+'Budget Group' +','+
                   'Category' +','+'Sub Category' +','+'Line Item Description'+','+'Line Item Gross Amount'+','+'Line Item Tax Percentage'+
                   ','+'Line Item Tax Amount'+','+'Line Item Net Amount'+','+'Paid By'+','+'Expense Type'+','+'Remaining Budget'+
                   ','+'Accept In Budget'+','+'Accept Over Budget'+','+'Accept Over Manual'+','+'Excess Over Budget'+','+'Comments'+','+'Exported'+
-                  +('\n')+('\n')+url+','+invoice_no +','+vat_no +','+invoice_date +','+supplier_name +','+supplier_address+','+net_amount +
+                  +('\n')+('\n')+url+','+invoice_no +','+invoice_date +','+vat_no +','+supplier_name +','+supplier_address+','+net_amount +
                   ','+tax_amount +','+gross_amount +','+itemNo +','+startDate +','+endDate +','+employee+','+budgetGroup +
                   ','+category +','+subCategory+','+description +','+lineGrossAmount +','+linetaxPercentage+','+linetaxAmount+','+
                   linenetAmount +','+paidBy +','+expenseType +','+remainingBudget +','+acceptedInBudget +','+acceptedOverBudget +','+
@@ -77,7 +81,7 @@ describe('Login', () => {
 
 
         cy.get('#invoices_list_refresh').click();
-        cy.get('#operator-invoice-code-INV-1464').click();
+        cy.get('#operator-invoice-code-INV-2609').click();
         cy.wait(5000);
         cy.get('#invoiceno').invoke('val').then(text => { const invoice_no = text;
         cy.get('#my-custom-id-invoiceDate').invoke('val').then(text => { const invoice_date = text;
@@ -119,7 +123,7 @@ describe('Login', () => {
         const lineGrossAmount= lineGrossAmount1.replace(/,/g,"");
         const linetaxAmount = linetaxAmount1.replace(/,/g,"");
         const linenetAmount = linenetAmount1.replace(/,/g,"");
-        cy.writeFile('AzureAI_Multiple_SingleLine_invoice.csv',url+','+invoice_no +','+vat_no +','+invoice_date +','+supplier_name +','+supplier_address+','+net_amount +
+        cy.writeFile('AzureAI_Multiple_SingleLine_invoice.csv',url+','+invoice_no +','+invoice_date +','+vat_no +','+supplier_name +','+supplier_address+','+net_amount +
                   ','+tax_amount +','+gross_amount +','+itemNo +','+startDate +','+endDate +','+employee+','+budgetGroup +
                   ','+category +','+subCategory+','+description +','+lineGrossAmount +','+linetaxPercentage+','+linetaxAmount+','+
                   linenetAmount +','+paidBy +','+expenseType +','+remainingBudget +','+acceptedInBudget +','+acceptedOverBudget +','+
@@ -130,7 +134,7 @@ describe('Login', () => {
 
 
         cy.get('#invoices_list_refresh').click();
-        cy.get('#operator-invoice-code-INV-1465').click();
+        cy.get('#operator-invoice-code-INV-2610').click();
         cy.wait(5000);
         cy.get('#invoiceno').invoke('val').then(text => { const invoice_no = text;
         cy.get('#my-custom-id-invoiceDate').invoke('val').then(text => { const invoice_date = text;
@@ -172,18 +176,18 @@ describe('Login', () => {
         const lineGrossAmount= lineGrossAmount1.replace(/,/g,"");
         const linetaxAmount = linetaxAmount1.replace(/,/g,"");
         const linenetAmount = linenetAmount1.replace(/,/g,"");
-        cy.writeFile('AzureAI_Multiple_SingleLine_invoice.csv',url+','+invoice_no +','+vat_no +','+invoice_date +','+supplier_name +','+supplier_address+','+net_amount +
-                  ','+tax_amount +','+gross_amount +','+itemNo +','+startDate +','+endDate +','+employee+','+budgetGroup +
-                  ','+category +','+subCategory+','+description +','+lineGrossAmount +','+linetaxPercentage+','+linetaxAmount+','+
-                  linenetAmount +','+paidBy +','+expenseType +','+remainingBudget +','+acceptedInBudget +','+acceptedOverBudget +','+
-                  acceptedOverBudgetManual +','+excessOverBudget +','+comments +','+exported+('\n') ,{ flag: 'a+' });
+        cy.writeFile('AzureAI_Multiple_SingleLine_invoice.csv',url+','+invoice_no +','+invoice_date +','+vat_no +','+supplier_name +','+supplier_address+','+net_amount +
+                ','+tax_amount +','+gross_amount +','+itemNo +','+startDate +','+endDate +','+employee+','+budgetGroup +
+                ','+category +','+subCategory+','+description +','+lineGrossAmount +','+linetaxPercentage+','+linetaxAmount+','+
+                linenetAmount +','+paidBy +','+expenseType +','+remainingBudget +','+acceptedInBudget +','+acceptedOverBudget +','+
+                acceptedOverBudgetManual +','+excessOverBudget +','+comments +','+exported+('\n'),{ flag: 'a+' });
         
         })})})})})})})})})})})})})})})})})})})})})})})})})})})})})})
         cy.go('back');
 
 
         cy.get('#invoices_list_refresh').click();
-        cy.get('#operator-invoice-code-INV-1466').click();
+        cy.get('#operator-invoice-code-INV-2611').click();
         cy.wait(5000);
         cy.get('#invoiceno').invoke('val').then(text => { const invoice_no = text;
         cy.get('#my-custom-id-invoiceDate').invoke('val').then(text => { const invoice_date = text;
@@ -225,11 +229,11 @@ describe('Login', () => {
         const lineGrossAmount= lineGrossAmount1.replace(/,/g,"");
         const linetaxAmount = linetaxAmount1.replace(/,/g,"");
         const linenetAmount = linenetAmount1.replace(/,/g,"");
-        cy.writeFile('AzureAI_Multiple_SingleLine_invoice.csv',url+','+invoice_no +','+vat_no +','+invoice_date +','+supplier_name +','+supplier_address+','+net_amount +
-                  ','+tax_amount +','+gross_amount +','+itemNo +','+startDate +','+endDate +','+employee+','+budgetGroup +
-                  ','+category +','+subCategory+','+description +','+lineGrossAmount +','+linetaxPercentage+','+linetaxAmount+','+
-                  linenetAmount +','+paidBy +','+expenseType +','+remainingBudget +','+acceptedInBudget +','+acceptedOverBudget +','+
-                  acceptedOverBudgetManual +','+excessOverBudget +','+comments +','+exported+('\n'),{ flag: 'a+' });
+        cy.writeFile('AzureAI_Multiple_SingleLine_invoice.csv',url+','+invoice_no +','+invoice_date +','+vat_no +','+supplier_name +','+supplier_address+','+net_amount +
+                ','+tax_amount +','+gross_amount +','+itemNo +','+startDate +','+endDate +','+employee+','+budgetGroup +
+                ','+category +','+subCategory+','+description +','+lineGrossAmount +','+linetaxPercentage+','+linetaxAmount+','+
+                linenetAmount +','+paidBy +','+expenseType +','+remainingBudget +','+acceptedInBudget +','+acceptedOverBudget +','+
+                acceptedOverBudgetManual +','+excessOverBudget +','+comments +','+exported+('\n'),{ flag: 'a+' });
         
         })})})})})})})})})})})})})})})})})})})})})})})})})})})})})})
         cy.go('back');
@@ -237,7 +241,7 @@ describe('Login', () => {
 
 
         cy.get('#invoices_list_refresh').click();
-        cy.get('#operator-invoice-code-INV-1467').click();
+        cy.get('#operator-invoice-code-INV-2612').click();
         cy.wait(5000);
         cy.get('#invoiceno').invoke('val').then(text => { const invoice_no = text;
         cy.get('#my-custom-id-invoiceDate').invoke('val').then(text => { const invoice_date = text;
@@ -279,14 +283,15 @@ describe('Login', () => {
         const lineGrossAmount= lineGrossAmount1.replace(/,/g,"");
         const linetaxAmount = linetaxAmount1.replace(/,/g,"");
         const linenetAmount = linenetAmount1.replace(/,/g,"");
-        cy.writeFile('AzureAI_Multiple_SingleLine_invoice.csv',url+','+invoice_no +','+vat_no +','+invoice_date +','+supplier_name +','+supplier_address+','+net_amount +
-                  ','+tax_amount +','+gross_amount +','+itemNo +','+startDate +','+endDate +','+employee+','+budgetGroup +
-                  ','+category +','+subCategory+','+description +','+lineGrossAmount +','+linetaxPercentage+','+linetaxAmount+','+
-                  linenetAmount +','+paidBy +','+expenseType +','+remainingBudget +','+acceptedInBudget +','+acceptedOverBudget +','+
-                  acceptedOverBudgetManual +','+excessOverBudget +','+comments +','+exported+('\n') ,{ flag: 'a+' });
+        cy.writeFile('AzureAI_Multiple_SingleLine_invoice.csv',url+','+invoice_no +','+invoice_date +','+vat_no +','+supplier_name +','+supplier_address+','+net_amount +
+                ','+tax_amount +','+gross_amount +','+itemNo +','+startDate +','+endDate +','+employee+','+budgetGroup +
+                ','+category +','+subCategory+','+description +','+lineGrossAmount +','+linetaxPercentage+','+linetaxAmount+','+
+                linenetAmount +','+paidBy +','+expenseType +','+remainingBudget +','+acceptedInBudget +','+acceptedOverBudget +','+
+                acceptedOverBudgetManual +','+excessOverBudget +','+comments +','+exported+('\n'),{ flag: 'a+' });
         
         })})})})})})})})})})})})})})})})})})})})})})})})})})})})})})
         cy.go('back');
+
 
     })
 })

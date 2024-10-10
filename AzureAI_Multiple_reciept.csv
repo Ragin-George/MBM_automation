@@ -1,0 +1,4 @@
+Invoice details web url ,Invoice Number,VAT no,Invoice Date,Supplier Name,Supplier Address,Net Amount,Tax Amount,Gross Amount,Line Item Number,Start Date,End Date,Employee,Budget Group,Category,Sub Category,Line Item Description,Line Item Gross Amount,Line Item Tax Percentage,Line Item Tax Amount,Line Item Net Amount,Paid By,Expense Type,Remaining Budget,Accept In Budget,Accept Over Budget,Accept Over Manual,Excess Over Budget,Comments,Exported
+https://opencage.f2wdev.eu/invoice-detail/1168,,1.72484E+13,24-05-2022,gvh.de,,8.41,0.59,9,1,24-05-2022,,,,,,,9,7,0.59,8.41,Self,Private,0,0,0,0,,,
+https://opencage.f2wdev.eu/invoice-detail/1169,,7933692954,25-05-2024,DB,Rheinstraße 2  55116 Mainz,23.74,1.66,25.4,1,25-05-2024,,,,,,,25.4,7,1.66,23.74,Self,Private,0,0,0,0,,,
+https://opencage.f2wdev.eu/invoice-detail/1170,19923,19923,01-05-2022,>hvv,,8.41,0.59,9,1,01-05-2022,,,,,,,9,7,0.59,8.41,Self,Private,0,0,0,0,,,
