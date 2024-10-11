@@ -37,7 +37,7 @@ describe('Login', () => {
                 const net_amount= net_amount1.replace(/,/g,"");
                 const gross_amount= gross_amount1.replace(/,/g,"");
                 const tax_amount= tax_amount1.replace(/,/g,"");
-                cy.writeFile('AzureAI_Multiple_MultiLine_invoice.csv','Invoice details web url '+','+ 'Invoice Number'+','+'VAT no'+ ','+
+                cy.writeFile('AzureAI_Multiple_MultiLine_invoice1.csv','Invoice details web url '+','+ 'Invoice Number'+','+'VAT no'+ ','+
                     'Invoice Date'+','+ 'Supplier Name'+','+'Supplier Address'+','+'Net Amount'+','+'Tax Amount'+','+
                     'Gross Amount'+('\n')+url+','+invoice_no +','+vat_no +','+invoice_date +','+supplier_name +','+supplier_address+','+net_amount +
                     ','+tax_amount +','+gross_amount+ ('\n')+('\n')+'Line Item Number'+','+'Start Date'+','+'End Date'+
@@ -76,7 +76,7 @@ describe('Login', () => {
                 const linetaxAmount = linetaxAmount1.replace(/,/g,"");
                 const linenetAmount = linenetAmount1.replace(/,/g,"");
                 const description = description1.replace(/,/g," ");
-                cy.writeFile('AzureAI_Multiple_MultiLine_invoice.csv',itemNo+','+startDate+','+endDate+','+budgetGroup+','+category+','+subCategory+','+description+
+                cy.writeFile('AzureAI_Multiple_MultiLine_invoice1.csv',itemNo+','+startDate+','+endDate+','+budgetGroup+','+category+','+subCategory+','+description+
                         ','+lineGrossAmount+','+linetaxPercentage+','+linetaxAmount+','+linenetAmount+','+paidBy+','+
                         expenseType+','+remainingBudget+','+acceptedInBudget+','+acceptedOverBudget+
                         ','+excessOverBudget+','+comments+','+exported+('\n'),{ flag:'a+'}); 
@@ -84,9 +84,9 @@ describe('Login', () => {
         })})})})})})})})})})})})})})})})})})})})})})})})})})})})})})})
 
         cy.go('back');
-        cy.get('#invoices_list_refresh').click();
-        cy.get('#operator-invoice-code-INV-2797').click();
-        cy.wait(5000);
+        // cy.get('#invoices_list_refresh').click();
+        // cy.get('#operator-invoice-code-INV-2797').click();
+        // cy.wait(5000);
         cy.get('#invoiceno').invoke('val').then(text => { const invoice_no = text;
             cy.get('#my-custom-id-invoiceDate').invoke('val').then(text => { const invoice_date = text;
             cy.get('#canvas-form-vat-no').invoke('val').then(text => { const vat_no = text;
@@ -102,7 +102,7 @@ describe('Login', () => {
                 const net_amount= net_amount1.replace(/,/g,"");
                 const gross_amount= gross_amount1.replace(/,/g,"");
                 const tax_amount= tax_amount1.replace(/,/g,"");
-                cy.writeFile('AzureAI_Multiple_MultiLine_invoice.csv','Invoice details web url '+','+ 'Invoice Number'+','+'VAT no'+ ','+
+                cy.writeFile('AzureAI_Multiple_MultiLine_invoice1.csv','Invoice details web url '+','+ 'Invoice Number'+','+'VAT no'+ ','+
                     'Invoice Date'+','+ 'Supplier Name'+','+'Supplier Address'+','+'Net Amount'+','+'Tax Amount'+','+
                     'Gross Amount'+('\n')+url+','+invoice_no +','+vat_no +','+invoice_date +','+supplier_name +','+supplier_address+','+net_amount +
                     ','+tax_amount +','+gross_amount+ ('\n')+('\n')+'Line Item Number'+','+'Start Date'+','+'End Date'+
@@ -141,7 +141,7 @@ describe('Login', () => {
                 const linetaxAmount = linetaxAmount1.replace(/,/g,"");
                 const linenetAmount = linenetAmount1.replace(/,/g,"");
                 const description = description1.replace(/,/g," ");
-                cy.writeFile('AzureAI_Multiple_MultiLine_invoice.csv',itemNo+','+startDate+','+endDate+','+budgetGroup+','+category+','+subCategory+','+description+
+                cy.writeFile('AzureAI_Multiple_MultiLine_invoice1.csv',itemNo+','+startDate+','+endDate+','+budgetGroup+','+category+','+subCategory+','+description+
                         ','+lineGrossAmount+','+linetaxPercentage+','+linetaxAmount+','+linenetAmount+','+paidBy+','+
                         expenseType+','+remainingBudget+','+acceptedInBudget+','+acceptedOverBudget+
                         ','+excessOverBudget+','+comments+','+exported+('\n'),{ flag:'a+'}); 
@@ -149,9 +149,9 @@ describe('Login', () => {
         })})})})})})})})})})})})})})})})})})})})})})})})})})})})})})})
 
         cy.go('back');
-        cy.get('#invoices_list_refresh').click();
-        cy.get('#operator-invoice-code-INV-2798').click();
-        cy.wait(5000);
+        // cy.get('#invoices_list_refresh').click();
+        // cy.get('#operator-invoice-code-INV-2798').click();
+        // cy.wait(5000);
         cy.get('#invoiceno').invoke('val').then(text => { const invoice_no = text;
             cy.get('#my-custom-id-invoiceDate').invoke('val').then(text => { const invoice_date = text;
             cy.get('#canvas-form-vat-no').invoke('val').then(text => { const vat_no = text;
@@ -167,7 +167,7 @@ describe('Login', () => {
                 const net_amount= net_amount1.replace(/,/g,"");
                 const gross_amount= gross_amount1.replace(/,/g,"");
                 const tax_amount= tax_amount1.replace(/,/g,"");
-                cy.writeFile('AzureAI_Multiple_MultiLine_invoice.csv','Invoice details web url '+','+ 'Invoice Number'+','+'VAT no'+ ','+
+                cy.writeFile('AzureAI_Multiple_MultiLine_invoice1.csv','Invoice details web url '+','+ 'Invoice Number'+','+'VAT no'+ ','+
                     'Invoice Date'+','+ 'Supplier Name'+','+'Supplier Address'+','+'Net Amount'+','+'Tax Amount'+','+
                     'Gross Amount'+('\n')+url+','+invoice_no +','+vat_no +','+invoice_date +','+supplier_name +','+supplier_address+','+net_amount +
                     ','+tax_amount +','+gross_amount+ ('\n')+('\n')+'Line Item Number'+','+'Start Date'+','+'End Date'+
@@ -206,14 +206,14 @@ describe('Login', () => {
                 const linetaxAmount = linetaxAmount1.replace(/,/g,"");
                 const linenetAmount = linenetAmount1.replace(/,/g,"");
                 const description = description1.replace(/,/g," ");
-                cy.writeFile('AzureAI_Multiple_MultiLine_invoice.csv',itemNo+','+startDate+','+endDate+','+budgetGroup+','+category+','+subCategory+','+description+
+                cy.writeFile('AzureAI_Multiple_MultiLine_invoice1.csv',itemNo+','+startDate+','+endDate+','+budgetGroup+','+category+','+subCategory+','+description+
                         ','+lineGrossAmount+','+linetaxPercentage+','+linetaxAmount+','+linenetAmount+','+paidBy+','+
                         expenseType+','+remainingBudget+','+acceptedInBudget+','+acceptedOverBudget+
                         ','+excessOverBudget+','+comments+','+exported+('\n'),{ flag:'a+'}); 
         
         })})})})})})})})})})})})})})})})})})})})})})})})})})})})})})})
 
-
+    
     })
         
 })

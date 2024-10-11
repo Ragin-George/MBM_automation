@@ -15,7 +15,7 @@ describe('Upload', () => {
         cy.visit("http://opencage.f2wdev.eu/invoices")
         cy.wait(3000);
         cy.get('#invoices_list_add').click();
-        cy.get('#brows-file-btn').selectFile(['Taxi/Screenshot 2024-06-19 112257.png','Receipts/d448bbe1-5308-4163-b8fd-67599b7f9ddd.jpg','Receipts/dd27b22a-e01a-446b-a7d6-6191ce021967.jpg'], {action: 'drag-drop'})
+        cy.get('#brows-file-btn').selectFile(['Taxi/Screenshot 2024-06-19 112257.png','Taxi/Screenshot 2024-06-19 112315.png','Taxi/Screenshot 2024-06-19 112435.png'], {action: 'drag-drop'})
         cy.get('#Receipt').click();
         cy.wait(2000);
         cy.get('#upload-invoice-by-operator-submit').click();
